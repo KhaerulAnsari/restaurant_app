@@ -32,35 +32,6 @@ class DetailRestaurant extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Container(
-                    margin: EdgeInsets.only(top: 10, left: 10, right: 10),
-                    child: Row(
-                      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.pop(context);
-                          },
-                                                  child: Container(
-                              width: 25,
-                              height: 25,
-                              decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Colors.white.withOpacity(0.6)),
-                              child: Center(
-                                child: Icon(
-                                  Icons.arrow_back_ios,
-                                  size: 15,
-                                ),
-                              )),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        // Icon(Icons.favorite)
-                      ],
-                    ),
-                  ),
                 ],
               ),
               ListView(
@@ -96,7 +67,12 @@ class DetailRestaurant extends StatelessWidget {
                                         fontSize: 14,
                                         decoration: TextDecoration.none),
                                   ),
-                                  Text("11.00 - 22.00", style: relewayGrey.copyWith(fontSize: 12, decoration: TextDecoration.none),)
+                                  Text(
+                                    "11.00 - 22.00",
+                                    style: relewayGrey.copyWith(
+                                        fontSize: 12,
+                                        decoration: TextDecoration.none),
+                                  )
                                 ],
                               ),
                             ],
@@ -228,11 +204,69 @@ class DetailRestaurant extends StatelessWidget {
                               }).toList(),
                             ),
                           ),
+                          const SizedBox(
+                            height: 30,
+                          ),
+                          SizedBox(
+                            width: double.infinity,
+                            height: 45,
+                            child: TextButton(
+                              onPressed: () {},
+                              style: TextButton.styleFrom(
+                                backgroundColor: pinkColor,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                elevation: 0,
+                              ),
+                              child: Text(
+                                'See Location',
+                                style: poppinsPink.copyWith(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ),
                   ),
                 ],
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 10, left: 10, right: 10),
+                child: Row(
+                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                          width: 25,
+                          height: 25,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.white.withOpacity(0.6),
+                          ),
+                          child: Center(
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 5),
+                              child: Icon(
+                                Icons.arrow_back_ios,
+                                size: 15,
+                              ),
+                            ),
+                          )),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    // Icon(Icons.favorite)
+                  ],
+                ),
               ),
             ],
           ),
